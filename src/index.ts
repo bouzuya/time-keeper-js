@@ -1,2 +1,1 @@
-export class DateTime {
-}
+export { now } from './now';
