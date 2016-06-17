@@ -1,0 +1,24 @@
+{
+  "name": "time-keeper",
+  "description": "TimeKeeper.js",
+  "version": "0.0.0",
+  "author": {
+    "name": "bouzuya",
+    "email": "m@bouzuya.net",
+    "url": "http://bouzuya.net/"
+  },
+  "bugs": {
+    "url": "https://github.com/bouzuya/time-keeper-js/issues"
+  },
+  "homepage": "https://github.com/bouzuya/time-keeper-js#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bouzuya/time-keeper-js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
