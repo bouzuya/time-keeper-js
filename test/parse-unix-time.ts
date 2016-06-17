@@ -7,4 +7,5 @@ test('parseUNIXTime()', () => {
   const unixTime = moment().unix();
   const dt = parseUNIXTime(unixTime);
   assert(dt.toUNIXTime() === unixTime);
+  assert.throws(() => parseUNIXTime(undefined));
 });

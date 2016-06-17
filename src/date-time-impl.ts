@@ -13,13 +13,18 @@ export class DateTimeImpl implements DateTime {
   }
 
   static parseISOString(isoString: ISOString): DateTime {
+    if (typeof isoString !== 'string') throw new Error();
+    const p = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|(?:[-+]\d{2}:\d{2}))$/;
+    if (!isoString.match(p)) throw new Error();
     const dt = moment.parseZone(isoString);
+    if (!dt.isValid()) throw new Error();
     return new DateTimeImpl(dt);
   }
 
   static parseUNIXTime(unixTime: UNIXTime): DateTime {
     const dateValue = unixTime * 1000;
     const dt = moment(dateValue);
+    if (!dt.isValid()) throw new Error();
     return new DateTimeImpl(dt);
   }
 
