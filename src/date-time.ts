@@ -12,30 +12,29 @@ export interface DateTime {
 }
 
 export class DateTimeImpl implements DateTime {
-  private dt: moment.Moment;
-
   static now(): DateTime {
-    const isoString = moment().format();
-    return new DateTimeImpl(isoString);
+    const dt = moment();
+    return new DateTimeImpl(dt);
   }
 
   static parseISOString(isoString: ISOString): DateTime {
-    return new DateTimeImpl(isoString);
+    const dt = moment.parseZone(isoString);
+    return new DateTimeImpl(dt);
   }
 
   static parseUNIXTime(unixTime: UNIXTime): DateTime {
     const dateValue = unixTime * 1000;
-    const isoString = moment(dateValue).format();
-    return new DateTimeImpl(isoString);
+    const dt = moment(dateValue);
+    return new DateTimeImpl(dt);
   }
 
-  constructor(isoString: ISOString) {
-    this.dt = moment.parseZone(isoString);
+  constructor(private dt: moment.Moment) {
+    // do nothing
   }
 
   inTimeZone(timeZoneOffsetString: TimeZoneOffsetString): DateTime {
-    const isoString = moment(this.dt).utcOffset(timeZoneOffsetString).format();
-    return new DateTimeImpl(isoString);
+    const dt = moment(this.dt).utcOffset(timeZoneOffsetString);
+    return new DateTimeImpl(dt);
   }
 
   toISOString(): ISOString {
