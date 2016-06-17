@@ -50,6 +50,10 @@ export class DateTimeImpl implements DateTime {
     return this.dt.format();
   }
 
+  toString(): string {
+    return this.toISOString();
+  }
+
   toTimeZoneOffsetString(): TimeZoneOffsetString {
     return this.dt.format('Z');
   }
