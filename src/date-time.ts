@@ -6,10 +6,19 @@ export type UNIXTime = number; // 1451772245
 
 export interface DateTime {
   inTimeZone(timeZoneOffsetString: TimeZoneOffsetString): DateTime;
+  plus(n: number, unit: Unit): DateTime;
   toISOString(): ISOString;
   toTimeZoneOffsetString(): TimeZoneOffsetString;
   toUNIXTime(): UNIXTime;
 }
+
+export type Unit =
+  'year' | 'years' |
+  'month' | 'months' |
+  'day' | 'days' |
+  'hour' | 'hours' |
+  'minute' | 'minutes' |
+  'second' | 'seconds';
 
 export class DateTimeImpl implements DateTime {
   static now(): DateTime {
@@ -34,6 +43,11 @@ export class DateTimeImpl implements DateTime {
 
   inTimeZone(timeZoneOffsetString: TimeZoneOffsetString): DateTime {
     const dt = moment(this.dt).utcOffset(timeZoneOffsetString);
+    return new DateTimeImpl(dt);
+  }
+
+  plus(n: number, unit: Unit): DateTime {
+    const dt = moment(this.dt).add(n, unit);
     return new DateTimeImpl(dt);
   }
 

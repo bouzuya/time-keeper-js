@@ -18,6 +18,7 @@
     "./test/now.ts",
     "./test/parse-iso-string.ts",
     "./test/parse-unix-time.ts",
+    "./test/plus.ts",
     "./typings/index.d.ts"
   ]
 }
