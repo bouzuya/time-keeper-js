@@ -7,18 +7,47 @@
     "email": "m@bouzuya.net",
     "url": "http://bouzuya.net/"
   },
+  "beater": {
+    "dir": "./.tmp/test/",
+    "require": [
+      "./scripts/enable-power-assert.js"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/bouzuya/time-keeper-js/issues"
   },
+  "devDependencies": {
+    "beater": "0.4.0",
+    "beater-cli": "0.2.2",
+    "espower-loader": "1.0.0",
+    "parallelshell": "2.0.0",
+    "power-assert": "1.4.1",
+    "proxyquire": "1.7.9",
+    "sinon": "1.17.4",
+    "typescript": "1.8.10",
+    "typings": "1.3.0",
+    "watch": "0.18.0"
+  },
+  "files": [
+    "./lib/"
+  ],
   "homepage": "https://github.com/bouzuya/time-keeper-js#readme",
   "keywords": [],
   "license": "MIT",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/bouzuya/time-keeper-js.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "build": "tsc && npm run copy",
+    "clean": "rm -rf .tmp/ lib/",
+    "copy": "([ -d lib/ ] || mkdir -p lib/) && cp -R .tmp/src/* lib/",
+    "prepublish": "typings install && npm run build",
+    "test": "beater",
+    "watch": "parallelshell 'tsc --watch' 'npm run watch-copy' 'npm run watch-test'",
+    "watch-copy": "watch --wait 2 'npm run copy' '.tmp/src/'",
+    "watch-test": "watch --wait 2 'npm test' '.tmp/test/'"
+  },
+  "typings": "lib/index.d.ts"
 }
