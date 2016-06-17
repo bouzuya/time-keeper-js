@@ -1,5 +1,5 @@
 import { DateTime, DateTimeImpl } from './date-time';
 
-const now = (): DateTime => DateTimeImpl.now();
+const now = DateTimeImpl.now;
 
 export { now };

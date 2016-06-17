@@ -12,7 +12,8 @@ export class DateTimeImpl implements DateTime {
   private dt: moment.Moment;
 
   static now(): DateTime {
-    return new DateTimeImpl(moment().format());
+    const isoString = moment().format();
+    return new DateTimeImpl(isoString);
   }
 
   static parseISOString(isoString: ISOString): DateTime {
