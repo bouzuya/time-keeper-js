@@ -1,5 +1,4 @@
 import * as assert from 'power-assert';
-import * as sinon from 'sinon';
 import { test } from './';
 import { parseISOString } from '../src/parse-iso-string';
 
