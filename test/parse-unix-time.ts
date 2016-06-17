@@ -1,7 +1,7 @@
 import * as assert from 'power-assert';
 import * as moment from 'moment';
 import { test } from './';
-import { parseUNIXTime } from '../src/parse-unix-time';
+import { parseUNIXTime } from '../src/';
 
 test('parseUNIXTime()', () => {
   const unixTime = moment().unix();
