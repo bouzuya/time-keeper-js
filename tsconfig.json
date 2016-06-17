@@ -13,6 +13,7 @@
   },
   "files": [
     "./src/index.ts",
+    "./test/in-time-zone.ts",
     "./test/index.ts",
     "./test/now.ts",
     "./test/parse-iso-string.ts",
