@@ -1,4 +1,5 @@
-import { DateTime, DateTimeImpl } from './date-time';
+import { DateTime } from './date-time';
+import { DateTimeImpl } from './date-time-impl';
 
 const now = DateTimeImpl.now;
 const parseISOString = DateTimeImpl.parseISOString;
