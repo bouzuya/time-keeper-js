@@ -15,6 +15,7 @@
     "./src/index.ts",
     "./test/index.ts",
     "./test/now.ts",
+    "./test/parse-iso-string.ts",
     "./typings/index.d.ts"
   ]
 }
