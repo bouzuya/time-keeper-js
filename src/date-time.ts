@@ -5,12 +5,16 @@ export type TimeZoneOffsetString = string; // '-07:00'
 export type UNIXTime = number; // 1451772245
 
 export interface DateTime {
+  get(field: Field): number;
   inTimeZone(timeZoneOffsetString: TimeZoneOffsetString): DateTime;
   plus(n: number, unit: Unit): DateTime;
   toISOString(): ISOString;
   toTimeZoneOffsetString(): TimeZoneOffsetString;
   toUNIXTime(): UNIXTime;
 }
+
+export type Field =
+  'year' | 'month' | 'date' | 'hour' | 'minute' | 'second';
 
 export type Unit =
   'year' | 'years' |
@@ -39,6 +43,11 @@ export class DateTimeImpl implements DateTime {
 
   constructor(private dt: moment.Moment) {
     // do nothing
+  }
+
+  get(field: Field): number {
+    const n = this.dt.get(field);
+    return field === 'month' ? n + 1 : n;
   }
 
   inTimeZone(timeZoneOffsetString: TimeZoneOffsetString): DateTime {
