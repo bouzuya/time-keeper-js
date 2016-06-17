@@ -11,4 +11,5 @@ test('get()', () => {
   assert(dt.get('hour') === 15);
   assert(dt.get('minute') === 4);
   assert(dt.get('second') === 5);
+  assert.throws(() => dt.get(<any>'day'));
 });

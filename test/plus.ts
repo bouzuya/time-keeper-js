@@ -11,4 +11,5 @@ test('plus()', () => {
   assert(dt.plus(1, 'hour').toISOString() === '2016-01-02T16:04:05-07:00');
   assert(dt.plus(1, 'minute').toISOString() === '2016-01-02T15:05:05-07:00');
   assert(dt.plus(1, 'second').toISOString() === '2016-01-02T15:04:06-07:00');
+  assert.throws(() => dt.plus(1, <any>'days'));
 });

@@ -39,6 +39,8 @@ export class DateTimeImpl implements DateTime {
   }
 
   get(field: Field): number {
+    const p = /^(?:year|month|date|hour|minute|second)$/;
+    if (!field.match(p)) throw new Error();
     const n = this.dt.get(field);
     return field === 'month' ? n + 1 : n;
   }
@@ -49,6 +51,8 @@ export class DateTimeImpl implements DateTime {
   }
 
   plus(n: number, unit: Unit): DateTime {
+    const p = /^(?:year|month|day|hour|minute|second)$/;
+    if (!unit.match(p)) throw new Error();
     const dt = moment(this.dt).add(n, unit);
     return new DateTimeImpl(dt);
   }
