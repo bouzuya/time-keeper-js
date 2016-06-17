@@ -13,16 +13,9 @@ export interface DateTime {
   toUNIXTime(): UNIXTime;
 }
 
-export type Field =
-  'year' | 'month' | 'date' | 'hour' | 'minute' | 'second';
+export type Field = 'year' | 'month' | 'date' | 'hour' | 'minute' | 'second';
 
-export type Unit =
-  'year' | 'years' |
-  'month' | 'months' |
-  'day' | 'days' |
-  'hour' | 'hours' |
-  'minute' | 'minutes' |
-  'second' | 'seconds';
+export type Unit = 'year' | 'month' | 'day' | 'hour' | 'minute' | 'second';
 
 export class DateTimeImpl implements DateTime {
   static now(): DateTime {
