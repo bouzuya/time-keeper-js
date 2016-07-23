@@ -32,7 +32,7 @@
     "watch": "0.18.0"
   },
   "files": [
-    "./lib/"
+    "lib"
   ],
   "homepage": "https://github.com/bouzuya/time-keeper-js#readme",
   "keywords": [],
