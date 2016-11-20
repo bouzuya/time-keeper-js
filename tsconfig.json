@@ -19,6 +19,7 @@
     "./test/fns/now.ts",
     "./test/fns/parse-iso-string.ts",
     "./test/fns/parse-unix-time.ts",
+    "./test/fns/plus.ts",
     "./test/fns/to-iso-string.ts",
     "./test/fns/to-time-zone-offset-string.ts",
     "./test/fns/to-unix-time.ts",
