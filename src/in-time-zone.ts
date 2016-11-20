@@ -1,6 +1,6 @@
-import { DateTime } from '../types/date-time';
-import { TimeZoneOffsetString } from '../types/time-zone-offset-string';
-import { parseTimeZoneOffset } from '../_/parse-time-zone-offset';
+import { DateTime } from './types/date-time';
+import { TimeZoneOffsetString } from './types/time-zone-offset-string';
+import { parseTimeZoneOffset } from './_/parse-time-zone-offset';
 
 const inTimeZone = (
   dt: DateTime, timeZoneOffset: TimeZoneOffsetString

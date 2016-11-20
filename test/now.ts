@@ -1,11 +1,9 @@
 import * as assert from 'power-assert';
 import * as sinon from 'sinon';
-import { test, fixture } from '../';
-import { now } from '../../src/fns/now';
-import { toUNIXTime } from '../../src/fns/to-unix-time';
-import {
-  toTimeZoneOffsetString
-} from '../../src/fns/to-time-zone-offset-string';
+import { test, fixture } from './';
+import { now } from '../src/now';
+import { toUNIXTime } from '../src/to-unix-time';
+import { toTimeZoneOffsetString } from '../src/to-time-zone-offset-string';
 
 const category = 'fns/now > ';
 

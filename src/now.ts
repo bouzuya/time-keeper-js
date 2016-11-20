@@ -1,4 +1,4 @@
-import { DateTime } from '../types/date-time';
+import { DateTime } from './types/date-time';
 
 const now = (): DateTime => {
   const date = new Date();

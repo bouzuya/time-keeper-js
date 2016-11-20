@@ -1,16 +1,16 @@
 import * as assert from 'power-assert';
 import { test } from './';
 
-import { get } from '../src/fns/get';
-import { inTimeZone } from '../src/fns/in-time-zone';
-import { isLeapYear } from '../src/fns/is-leap-year';
-import { now } from '../src/fns/now';
-import { parseISOString } from '../src/fns/parse-iso-string';
-import { parseUNIXTime } from '../src/fns/parse-unix-time';
-import { plus } from '../src/fns/plus';
-import { toISOString } from '../src/fns/to-iso-string';
-import { toTimeZoneOffsetString } from '../src/fns/to-time-zone-offset-string';
-import { toUNIXTime } from '../src/fns/to-unix-time';
+import { get } from '../src/get';
+import { inTimeZone } from '../src/in-time-zone';
+import { isLeapYear } from '../src/is-leap-year';
+import { now } from '../src/now';
+import { parseISOString } from '../src/parse-iso-string';
+import { parseUNIXTime } from '../src/parse-unix-time';
+import { plus } from '../src/plus';
+import { toISOString } from '../src/to-iso-string';
+import { toTimeZoneOffsetString } from '../src/to-time-zone-offset-string';
+import { toUNIXTime } from '../src/to-unix-time';
 
 test('README example', () => {
   const dt1 = now();

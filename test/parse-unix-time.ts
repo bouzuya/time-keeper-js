@@ -1,7 +1,7 @@
 import * as assert from 'power-assert';
-import { test } from '../';
-import { parseUNIXTime } from '../../src/fns/parse-unix-time';
-import { toUNIXTime } from '../../src/fns/to-unix-time';
+import { test } from './';
+import { parseUNIXTime } from '../src/parse-unix-time';
+import { toUNIXTime } from '../src/to-unix-time';
 
 test('fns/parse-unix-time', () => {
   const unixTime = Math.floor(new Date().getTime() / 1000);

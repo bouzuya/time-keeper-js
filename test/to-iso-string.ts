@@ -1,8 +1,8 @@
 import * as assert from 'power-assert';
-import { test } from '../';
-import { parseUNIXTime } from '../../src/fns/parse-unix-time';
-import { inTimeZone } from '../../src/fns/in-time-zone';
-import { toISOString } from '../../src/fns/to-iso-string';
+import { test } from './';
+import { parseUNIXTime } from '../src/parse-unix-time';
+import { inTimeZone } from '../src/in-time-zone';
+import { toISOString } from '../src/to-iso-string';
 
 test('fns/to-iso-string', () => {
   // '2016-12-31T23:59:59+09:00'

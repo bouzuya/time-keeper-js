@@ -1,7 +1,7 @@
 import * as assert from 'power-assert';
-import { test } from '../';
-import { parseISOString } from '../../src/fns/parse-iso-string';
-import { get } from '../../src/fns/get';
+import { test } from './';
+import { parseISOString } from '../src/parse-iso-string';
+import { get } from '../src/get';
 
 test('fns/get', () => {
   const dt = parseISOString('2006-01-02T15:04:05-07:00');

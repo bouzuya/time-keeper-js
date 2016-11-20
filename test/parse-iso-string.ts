@@ -1,7 +1,7 @@
 import * as assert from 'power-assert';
-import { test } from '../';
-import { parseISOString } from '../../src/fns/parse-iso-string';
-import { toISOString } from '../../src/fns/to-iso-string';
+import { test } from './';
+import { parseISOString } from '../src/parse-iso-string';
+import { toISOString } from '../src/to-iso-string';
 
 const category = 'fns/parse-iso-string > ';
 

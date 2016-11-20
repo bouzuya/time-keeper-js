@@ -1,8 +1,8 @@
-import { DateTime } from '../types/date-time';
-import { Unit } from '../types/unit';
+import { DateTime } from './types/date-time';
+import { Unit } from './types/unit';
 import { get } from './get';
 import { parseISOString } from './parse-iso-string';
-import { isLeapYear } from '../_/is-leap-year';
+import { isLeapYear } from './_/is-leap-year';
 
 // days in month (common year)
 const dm1 = [31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31];

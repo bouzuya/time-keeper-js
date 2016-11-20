@@ -1,11 +1,11 @@
 import * as assert from 'power-assert';
-import { test } from '../';
-import { inTimeZone } from '../../src/fns/in-time-zone';
-import { parseISOString } from '../../src/fns/parse-iso-string';
-import { toISOString } from '../../src/fns/to-iso-string';
+import { test } from './';
+import { inTimeZone } from '../src/in-time-zone';
+import { parseISOString } from '../src/parse-iso-string';
+import { toISOString } from '../src/to-iso-string';
 import {
   toTimeZoneOffsetString
-} from '../../src/fns/to-time-zone-offset-string';
+} from '../src/to-time-zone-offset-string';
 
 test('fns/in-time-zone', () => {
   const isoString = '2006-01-02T15:04:05-07:00';

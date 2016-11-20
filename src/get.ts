@@ -1,5 +1,5 @@
-import { DateTime } from '../types/date-time';
-import { Field } from '../types/field';
+import { DateTime } from './types/date-time';
+import { Field } from './types/field';
 
 const get = (dt: DateTime, field: Field): number => {
   const date = new Date((dt._t - dt._z) * 1000);

@@ -1,10 +1,10 @@
 import * as assert from 'power-assert';
 import * as sinon from 'sinon';
-import { test, fixture } from '../';
-import { now } from '../../src/fns/now';
+import { test, fixture } from './';
+import { now } from '../src/now';
 import {
   toTimeZoneOffsetString
-} from '../../src/fns/to-time-zone-offset-string';
+} from '../src/to-time-zone-offset-string';
 
 const category = 'fns/to-time-zone-offset-string > ';
 

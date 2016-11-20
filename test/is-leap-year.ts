@@ -1,7 +1,7 @@
 import * as assert from 'power-assert';
-import { test } from '../';
-import { isLeapYear } from '../../src/fns/is-leap-year';
-import { parseISOString } from '../../src/fns/parse-iso-string';
+import { test } from './';
+import { isLeapYear } from '../src/is-leap-year';
+import { parseISOString } from '../src/parse-iso-string';
 
 test('fns/is-leap-year', () => {
   assert(isLeapYear(parseISOString('2001-01-01T00:00:00Z')) === false);
