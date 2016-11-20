@@ -1,7 +1,7 @@
-import { DateTime2 } from '../date-time-2';
+import { DateTime } from '../date-time';
 import { Field } from '../field';
 
-const get = (dt: DateTime2, field: Field): number => {
+const get = (dt: DateTime, field: Field): number => {
   const date = new Date((dt._t - dt._z) * 1000);
   switch (field) {
     case 'year': return date.getUTCFullYear();

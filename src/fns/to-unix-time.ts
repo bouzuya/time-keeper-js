@@ -1,7 +1,7 @@
-import { DateTime2 } from '../date-time-2';
+import { DateTime } from '../date-time';
 import { UNIXTime } from '../unix-time';
 
-const toUNIXTime = (dt: DateTime2): UNIXTime => {
+const toUNIXTime = (dt: DateTime): UNIXTime => {
   return dt._t;
 };
 

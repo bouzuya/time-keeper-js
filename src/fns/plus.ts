@@ -1,4 +1,4 @@
-import { DateTime2 } from '../date-time-2';
+import { DateTime } from '../date-time';
 import { Unit } from '../unit';
 import { get } from './get';
 import { parseISOString } from './parse-iso-string';
@@ -27,7 +27,7 @@ const days = (y: number, m: number, d: number): number => {
     + dayOfYear(y, m, d) - 1;
 };
 
-const addMonth = (dt: DateTime2, n: number): DateTime2 => {
+const addMonth = (dt: DateTime, n: number): DateTime => {
   const y1 = get(dt, 'year');
   const m1 = get(dt, 'month');
   const d1 = get(dt, 'date');
@@ -43,7 +43,7 @@ const addMonth = (dt: DateTime2, n: number): DateTime2 => {
   };
 };
 
-const plus = (dt: DateTime2, n: number, unit: Unit): DateTime2 => {
+const plus = (dt: DateTime, n: number, unit: Unit): DateTime => {
   const date = new Date((dt._t - dt._z) * 1000);
   switch (unit) {
     case 'year': return addMonth(dt, 12 * n);

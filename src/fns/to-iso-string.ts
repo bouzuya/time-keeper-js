@@ -1,9 +1,9 @@
-import { DateTime2 } from '../date-time-2';
+import { DateTime } from '../date-time';
 import { ISOString } from '../iso-string';
 import { lpad } from '../lpad';
 import { toTimeZoneOffsetString } from './to-time-zone-offset-string';
 
-const toISOString = (dt: DateTime2): ISOString => {
+const toISOString = (dt: DateTime): ISOString => {
   const date = new Date((dt._t - dt._z) * 1000);
   const y = date.getUTCFullYear().toString();
   const mo = lpad((date.getUTCMonth() + 1).toString(), 2, '0');
