@@ -10,6 +10,7 @@ const get = (dt: DateTime2, field: Field): number => {
     case 'hour': return date.getUTCHours();
     case 'minute': return date.getUTCMinutes();
     case 'second': return date.getUTCSeconds();
+    default: throw new Error();
   }
 };
 
