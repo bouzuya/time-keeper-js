@@ -1,4 +1,4 @@
-import { TimeZoneOffsetString } from './time-zone-offset-string';
+import { TimeZoneOffsetString } from './types/time-zone-offset-string';
 
 const parseTimeZoneOffset = (
   timeZoneOffsetString: TimeZoneOffsetString

@@ -1,6 +1,6 @@
 import { lpad } from '../lpad';
 import { DateTime } from '../types/date-time';
-import { TimeZoneOffsetString } from '../time-zone-offset-string';
+import { TimeZoneOffsetString } from '../types/time-zone-offset-string';
 
 const toTimeZoneOffsetString = (dt: DateTime): TimeZoneOffsetString => {
   const z = dt._z;
