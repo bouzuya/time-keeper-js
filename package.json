@@ -47,7 +47,7 @@
     "build:copy": "([ -d lib/ ] || mkdir -p lib/) && cp -R .tmp/src/* lib/",
     "build:ts": "tsc",
     "clean": "rimraf .tmp/ lib/",
-    "prepublish": "npm run build",
+    "prepublish": "npm-run-all -s 'clean' 'build'",
     "test": "beater",
     "watch": "npm-run-all -p 'watch:*'",
     "watch:copy": "watch --wait 2 'npm run copy' '.tmp/src/'",
