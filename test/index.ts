@@ -1,5 +1,5 @@
 import beater from 'beater';
 
-const { test } = beater();
+const { test, fixture } = beater();
 
-export { test };
+export { test, fixture };
