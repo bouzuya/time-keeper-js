@@ -31,7 +31,6 @@
     "./test/parse-unix-time.ts",
     "./test/plus.ts",
     "./test/readme.ts",
-    "./test/to-string.ts",
     "./typings/index.d.ts"
   ]
 }
