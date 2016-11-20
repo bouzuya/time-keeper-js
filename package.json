@@ -26,6 +26,7 @@
     "npm-run-all": "3.1.1",
     "power-assert": "1.4.2",
     "proxyquire": "1.7.10",
+    "rimraf": "2.5.4",
     "sinon": "1.17.6",
     "typescript": "2.0.10",
     "watch": "1.0.1"
@@ -45,7 +46,7 @@
     "build": "npm-run-all -s 'build:ts' 'build:copy'",
     "build:copy": "([ -d lib/ ] || mkdir -p lib/) && cp -R .tmp/src/* lib/",
     "build:ts": "tsc",
-    "clean": "rm -rf .tmp/ lib/",
+    "clean": "rimraf .tmp/ lib/",
     "prepublish": "npm run build",
     "test": "beater",
     "watch": "npm-run-all -p 'watch:*'",
