@@ -38,16 +38,16 @@
   "homepage": "https://github.com/bouzuya/time-keeper-js#readme",
   "keywords": [],
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/bouzuya/time-keeper-js.git"
   },
   "scripts": {
     "build": "npm-run-all -s 'build:ts' 'build:copy'",
-    "build:copy": "cpx '.tmp/src/*' 'lib/'",
+    "build:copy": "cpx '.tmp/src/*' './'",
     "build:ts": "tsc",
-    "clean": "rimraf '.tmp' 'lib'",
+    "clean": "rimraf '.tmp' '_' 'types' '*.js' '*.d.ts'",
     "prepublish": "npm-run-all -s 'clean' 'build'",
     "test": "beater",
     "watch": "npm-run-all -p 'watch:*'",
@@ -55,5 +55,5 @@
     "watch:test": "watch --wait 2 'npm test' '.tmp/test/'",
     "watch:ts": "tsc -- --watch"
   },
-  "typings": "lib/index.d.ts"
+  "typings": "index.d.ts"
 }
