@@ -1,4 +1,4 @@
-import { DateTime } from '../date-time';
+import { DateTime } from '../types/date-time';
 import { UNIXTime } from '../unix-time';
 
 const parseUNIXTime = (unixTime: UNIXTime): DateTime => {

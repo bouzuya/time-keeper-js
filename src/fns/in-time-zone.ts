@@ -1,4 +1,4 @@
-import { DateTime } from '../date-time';
+import { DateTime } from '../types/date-time';
 import { TimeZoneOffsetString } from '../time-zone-offset-string';
 import { parseTimeZoneOffset } from '../parse-time-zone-offset';
 

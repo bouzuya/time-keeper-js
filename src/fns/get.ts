@@ -1,4 +1,4 @@
-import { DateTime } from '../date-time';
+import { DateTime } from '../types/date-time';
 import { Field } from '../field';
 
 const get = (dt: DateTime, field: Field): number => {

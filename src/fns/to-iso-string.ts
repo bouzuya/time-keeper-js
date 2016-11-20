@@ -1,4 +1,4 @@
-import { DateTime } from '../date-time';
+import { DateTime } from '../types/date-time';
 import { ISOString } from '../iso-string';
 import { lpad } from '../lpad';
 import { toTimeZoneOffsetString } from './to-time-zone-offset-string';

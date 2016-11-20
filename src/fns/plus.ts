@@ -1,4 +1,4 @@
-import { DateTime } from '../date-time';
+import { DateTime } from '../types/date-time';
 import { Unit } from '../unit';
 import { get } from './get';
 import { parseISOString } from './parse-iso-string';
