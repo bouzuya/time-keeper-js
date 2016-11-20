@@ -12,7 +12,6 @@
     "target": "es2015"
   },
   "files": [
-    "./src/index.ts",
     "./test/fns/get.ts",
     "./test/fns/is-leap-year.ts",
     "./test/fns/in-time-zone.ts",
@@ -23,13 +22,6 @@
     "./test/fns/to-iso-string.ts",
     "./test/fns/to-time-zone-offset-string.ts",
     "./test/fns/to-unix-time.ts",
-    "./test/get.ts",
-    "./test/in-time-zone.ts",
-    "./test/index.ts",
-    "./test/now.ts",
-    "./test/parse-iso-string.ts",
-    "./test/parse-unix-time.ts",
-    "./test/plus.ts",
     "./test/readme.ts",
     "./typings/index.d.ts"
   ]
