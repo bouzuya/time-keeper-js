@@ -1,5 +1,5 @@
 import { DateTime } from '../types/date-time';
-import { UNIXTime } from '../unix-time';
+import { UNIXTime } from '../types/unix-time';
 
 const parseUNIXTime = (unixTime: UNIXTime): DateTime => {
   const date = new Date(unixTime * 1000);
