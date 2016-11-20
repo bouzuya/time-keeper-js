@@ -1,4 +1,4 @@
-import { lpad } from '../lpad';
+import { lpad } from '../_/lpad';
 import { DateTime } from '../types/date-time';
 import { TimeZoneOffsetString } from '../types/time-zone-offset-string';
 

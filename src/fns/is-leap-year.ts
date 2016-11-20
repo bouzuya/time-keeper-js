@@ -1,6 +1,6 @@
 import { DateTime } from '../types/date-time';
 import { get } from './get';
-import { isLeapYear } from '../is-leap-year';
+import { isLeapYear } from '../_/is-leap-year';
 
 const isLeapYear = (dt: DateTime): boolean => {
   const year = get(dt, 'year');

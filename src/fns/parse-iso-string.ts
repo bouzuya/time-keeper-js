@@ -1,6 +1,6 @@
 import { DateTime } from '../types/date-time';
 import { ISOString } from '../types/iso-string';
-import { parseTimeZoneOffset } from '../parse-time-zone-offset';
+import { parseTimeZoneOffset } from '../_/parse-time-zone-offset';
 
 const parseISOString = (s: ISOString): DateTime => {
   const pattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}([+-]\d{2}:\d{2}|Z)$/;
