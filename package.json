@@ -27,7 +27,7 @@
     "power-assert": "1.4.1",
     "proxyquire": "1.7.9",
     "sinon": "1.17.4",
-    "typescript": "1.8.10",
+    "typescript": "2.0.10",
     "typings": "1.3.0",
     "watch": "0.18.0"
   },
