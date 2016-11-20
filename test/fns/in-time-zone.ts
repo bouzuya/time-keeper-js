@@ -8,8 +8,10 @@ import {
 
 test('fns/in-time-zone', () => {
   const local = now();
-  const utc = inTimeZone(local, '+00:00');
-  assert(toTimeZoneOffsetString(utc) === '+00:00');
+  const utc = inTimeZone(local, 'Z');
+  assert(toTimeZoneOffsetString(utc) === 'Z');
+  const utc2 = inTimeZone(local, '+00:00');
+  assert(toTimeZoneOffsetString(utc2) === 'Z');
   const ja = inTimeZone(utc, '+09:00');
   assert(toTimeZoneOffsetString(ja) === '+09:00');
 });

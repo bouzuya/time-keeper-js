@@ -25,7 +25,7 @@ test(category + '(offset -540) === "+09:00"', fixture({
 }));
 
 
-test(category + '(offset 0) === "+00:00"', fixture({
+test(category + '(offset 0) === "Z"', fixture({
   before() {
     const context = {
       original: Date.prototype.getTimezoneOffset
@@ -38,5 +38,5 @@ test(category + '(offset 0) === "+00:00"', fixture({
   }
 }, () => {
   const dt = now();
-  assert(toTimeZoneOffsetString(dt) === '+00:00');
+  assert(toTimeZoneOffsetString(dt) === 'Z');
 }));
