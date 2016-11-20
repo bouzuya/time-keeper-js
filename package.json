@@ -47,13 +47,13 @@
     "build": "npm-run-all -s 'build:ts' 'build:copy'",
     "build:copy": "cpx '.tmp/src/*' 'lib/'",
     "build:ts": "tsc",
-    "clean": "rimraf .tmp/ lib/",
+    "clean": "rimraf '.tmp' 'lib'",
     "prepublish": "npm-run-all -s 'clean' 'build'",
     "test": "beater",
     "watch": "npm-run-all -p 'watch:*'",
     "watch:copy": "watch --wait 2 'npm run copy' '.tmp/src/'",
     "watch:test": "watch --wait 2 'npm test' '.tmp/test/'",
-    "watch:ts": "npm run build:ts -- --watch"
+    "watch:ts": "tsc -- --watch"
   },
   "typings": "lib/index.d.ts"
 }
