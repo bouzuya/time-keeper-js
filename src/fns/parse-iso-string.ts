@@ -1,5 +1,5 @@
 import { DateTime } from '../types/date-time';
-import { ISOString } from '../iso-string';
+import { ISOString } from '../types/iso-string';
 import { parseTimeZoneOffset } from '../parse-time-zone-offset';
 
 const parseISOString = (s: ISOString): DateTime => {
