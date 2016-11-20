@@ -1,5 +1,5 @@
 import { DateTime } from '../types/date-time';
-import { Unit } from '../unit';
+import { Unit } from '../types/unit';
 import { get } from './get';
 import { parseISOString } from './parse-iso-string';
 import { isLeapYear } from './is-leap-year';
