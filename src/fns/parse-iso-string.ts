@@ -7,7 +7,9 @@ const parseISOString = (s: ISOString): DateTime2 => {
   const match = s.match(pattern);
   if (match === null) throw new Error();
   const date = new Date(s);
-  const time = Math.floor(date.getTime() / 1000);
+  const ms = date.getTime();
+  if (isNaN(ms)) throw new Error();
+  const time = Math.floor(ms / 1000);
   const zone = parseTimeZoneOffset(match[1]);
   return { _t: time, _z: zone };
 };

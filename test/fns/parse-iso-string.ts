@@ -22,3 +22,9 @@ test(category + 'Z', () => {
   const dt = parseISOString(isoString);
   assert(toISOString(dt) === isoString);
 });
+
+test(category + 'Error', () => {
+  // assert.throws(() => parseISOString(undefined));
+  assert.throws(() => parseISOString('2016-01-02T15:04:05-07:XX'));
+  assert.throws(() => parseISOString('2016-99-02T15:04:05-07:00'));
+});
