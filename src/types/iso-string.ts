@@ -1,1 +1,1 @@
-export type ISOString = string; // '2016-01-02T15:04:05-07:00'
+export type ISOString = string; // '2006-01-02T15:04:05-07:00'
