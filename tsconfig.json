@@ -22,7 +22,6 @@
     "./test/fns/to-iso-string.ts",
     "./test/fns/to-time-zone-offset-string.ts",
     "./test/fns/to-unix-time.ts",
-    "./test/readme.ts",
-    "./typings/index.d.ts"
+    "./test/readme.ts"
   ]
 }
