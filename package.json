@@ -23,7 +23,7 @@
     "beater": "0.4.1",
     "beater-cli": "0.2.4",
     "espower-loader": "1.2.0",
-    "parallelshell": "2.0.0",
+    "npm-run-all": "3.1.1",
     "power-assert": "1.4.2",
     "proxyquire": "1.7.10",
     "sinon": "1.17.6",
@@ -42,14 +42,16 @@
     "url": "https://github.com/bouzuya/time-keeper-js.git"
   },
   "scripts": {
-    "build": "tsc && npm run copy",
+    "build": "npm-run-all -s 'build:ts' 'build:copy'",
+    "build:copy": "([ -d lib/ ] || mkdir -p lib/) && cp -R .tmp/src/* lib/",
+    "build:ts": "tsc",
     "clean": "rm -rf .tmp/ lib/",
-    "copy": "([ -d lib/ ] || mkdir -p lib/) && cp -R .tmp/src/* lib/",
     "prepublish": "npm run build",
     "test": "beater",
-    "watch": "parallelshell 'tsc --watch' 'npm run watch-copy' 'npm run watch-test'",
-    "watch-copy": "watch --wait 2 'npm run copy' '.tmp/src/'",
-    "watch-test": "watch --wait 2 'npm test' '.tmp/test/'"
+    "watch": "npm-run-all -p 'watch:*'",
+    "watch:copy": "watch --wait 2 'npm run copy' '.tmp/src/'",
+    "watch:test": "watch --wait 2 'npm test' '.tmp/test/'",
+    "watch:ts": "npm run build:ts -- --watch"
   },
   "typings": "lib/index.d.ts"
 }
