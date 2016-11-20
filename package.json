@@ -22,6 +22,7 @@
     "@types/sinon": "1.16.32",
     "beater": "0.4.1",
     "beater-cli": "0.2.4",
+    "cpx": "1.5.0",
     "espower-loader": "1.2.0",
     "npm-run-all": "3.1.1",
     "power-assert": "1.4.2",
@@ -44,7 +45,7 @@
   },
   "scripts": {
     "build": "npm-run-all -s 'build:ts' 'build:copy'",
-    "build:copy": "([ -d lib/ ] || mkdir -p lib/) && cp -R .tmp/src/* lib/",
+    "build:copy": "cpx '.tmp/src/*' 'lib/'",
     "build:ts": "tsc",
     "clean": "rimraf .tmp/ lib/",
     "prepublish": "npm-run-all -s 'clean' 'build'",
