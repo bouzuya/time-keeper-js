@@ -7,4 +7,5 @@ test('fns/parse-unix-time', () => {
   const unixTime = Math.floor(new Date().getTime() / 1000);
   const dt = parseUNIXTime(unixTime);
   assert(toUNIXTime(dt) === unixTime);
+  // assert.throws(() => parseUNIXTime(undefined));
 });

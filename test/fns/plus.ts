@@ -111,3 +111,9 @@ test(category + '(leap year)', () => {
   assert(toISOString(d5) === '1999-02-28T00:00:00+09:00');
   assert(toISOString(d6) === '2000-02-28T00:00:00+09:00');
 });
+
+test(category + 'invalid unit', () => {
+  const isoString = '2006-01-02T15:04:05-07:00';
+  const dt = parseISOString(isoString);
+  assert.throws(() => plus(dt, 1, <any>'days'));
+});
