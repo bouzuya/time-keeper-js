@@ -15,6 +15,7 @@
     "./src/index.ts",
     "./test/fns/in-time-zone.ts",
     "./test/fns/now.ts",
+    "./test/fns/parse-iso-string.ts",
     "./test/fns/parse-unix-time.ts",
     "./test/fns/to-iso-string.ts",
     "./test/fns/to-time-zone-offset-string.ts",
