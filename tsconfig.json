@@ -20,6 +20,7 @@
     "./test/parse-unix-time.ts",
     "./test/plus.ts",
     "./test/readme.ts",
+    "./test/readme-index.ts",
     "./test/to-iso-string.ts",
     "./test/to-time-zone-offset-string.ts",
     "./test/to-unix-time.ts"

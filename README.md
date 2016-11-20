@@ -23,17 +23,30 @@ $ npm install time-keeper
 
 ```ts
 import * as assert from 'assert';
+import {
+  get,
+  inTimeZone,
+  isLeapYear,
+  now,
+  parseISOString,
+  parseUNIXTime,
+  plus,
+  toISOString,
+  toTimeZoneOffsetString,
+  toUNIXTime
+} from 'time-keeper';
 
-import { get } from 'time-keeper/get';
-import { inTimeZone } from 'time-keeper/in-time-zone';
-import { isLeapYear } from 'time-keeper/is-leap-year';
-import { now } from 'time-keeper/now';
-import { parseISOString } from 'time-keeper/parse-iso-string';
-import { parseUNIXTime } from 'time-keeper/parse-unix-time';
-import { plus } from 'time-keeper/plus';
-import { toISOString } from 'time-keeper/to-iso-string';
-import { toTimeZoneOffsetString } from 'time-keeper/to-time-zone-offset-string';
-import { toUNIXTime } from 'time-keeper/to-unix-time';
+// You can also use import by function.
+// import { get } from 'time-keeper/get';
+// import { inTimeZone } from 'time-keeper/in-time-zone';
+// import { isLeapYear } from 'time-keeper/is-leap-year';
+// import { now } from 'time-keeper/now';
+// import { parseISOString } from 'time-keeper/parse-iso-string';
+// import { parseUNIXTime } from 'time-keeper/parse-unix-time';
+// import { plus } from 'time-keeper/plus';
+// import { toISOString } from 'time-keeper/to-iso-string';
+// import { toTimeZoneOffsetString } from 'time-keeper/to-time-zone-offset-string';
+// import { toUNIXTime } from 'time-keeper/to-unix-time';
 
 const dt1 = now();
 const dt2 = parseUNIXTime(toUNIXTime(dt1));
