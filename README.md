@@ -7,7 +7,7 @@ A simple date-time library.
 - simple api
     - no support milliseconds.
     - no support day of weeks.
-    - no support daylight saving time.
+    - no support DST: daylight saving time (summer time).
     - no flexible formatter.
     - no invalid state.
     - no mutable state.
