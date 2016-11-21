@@ -1,5 +1,4 @@
 import * as assert from 'power-assert';
-import * as sinon from 'sinon';
 import { test, fixture } from './';
 import { now } from '../src/now';
 import {

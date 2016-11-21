@@ -1,7 +1,6 @@
 import { DateTime } from './types/date-time';
 import { Unit } from './types/unit';
 import { get } from './get';
-import { parseISOString } from './parse-iso-string';
 import { isLeapYear } from './_/is-leap-year';
 
 // days in month (common year)
@@ -44,7 +43,6 @@ const addMonth = (dt: DateTime, n: number): DateTime => {
 };
 
 const plus = (dt: DateTime, n: number, unit: Unit): DateTime => {
-  const date = new Date((dt._t - dt._z) * 1000);
   switch (unit) {
     case 'year': return addMonth(dt, 12 * n);
     case 'month': return addMonth(dt, n);
